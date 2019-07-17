@@ -1,0 +1,39 @@
+<link rel="stylesheet" type="text/css" href="app/assets/stylesheets/login.scss">
+<div class="panel panel-default">
+  <div class="panel-heading" style="text-align: center; font-size: 40px;">Please sign in</div>
+  <br>
+  <br>
+  <br>
+  <div class="panel-body"> 
+
+   
+<%= form_tag( :url => { :action => "login" }, method: "post" ) do  %>
+  
+  <div class="field login" style="width: 350px; height: 50px; margin-left: 400px;">
+   <!--  <div class="row" style="margin-left: 150px;">
+    <%= label_tag :email  %>
+  </div> -->
+    <%= text_field_tag :email ,'', :class =>"form-control" , placeholder: "Email Address"  %>
+  </div>
+<br>
+<br>
+  <div class="field" style="width: 350px; height: 50px; margin-left: 400px;">
+   <!--  <div class="row" style="margin-left: 140px;">
+    <%= label_tag :password %>
+  </div> -->
+    <%= password_field_tag :password , '', :class => "form-control center", placeholder: "Password"  %>
+  </div>
+  <br>
+  <br>
+
+  <div class="actions" style="width: 350px; height: 50px; margin-left: 400px;">
+    <%= submit_tag "Sign in" ,class:"btn btn-lg btn-primary btn-block"%>
+  </div>
+<% end %>
+<br>
+<br>
+<div class="actions" style=" height: 50px; margin-left: 525px;">
+<%= link_to 'New User', "/users/new" , :class=>"btn btn-success" %>
+</div>
+ </div>
+</div>

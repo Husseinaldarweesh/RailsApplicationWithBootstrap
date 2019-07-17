@@ -1,0 +1,10 @@
+<h1 class="text-center font-weight-bold">Editing Article</h1>
+<br>
+<div class="text-center">
+<%= render 'form', article: @article %>
+</div>
+<br>
+<div class="text-center">
+<%= link_to 'Show', @article ,:class=>"btn btn-success" %> |
+<%= link_to 'Back', articles_path  ,:class=>"btn btn-success"%>
+</div>
